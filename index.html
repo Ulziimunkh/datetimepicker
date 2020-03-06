@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Picker</title>
+    <link rel="stylesheet" type="text/css" href="./jquery.datetimepicker.css"/>
+</head>
+<body>
+    <label for="datetimepicker">Date:</label>
+    <input type="text" id="datetimepicker" autocomplete="off"/><br><br>
+    <script src="./jquery.js"></script>
+    <script src="./php-date-formatter.min.js"></script>
+    <script src="./jquery.datetimepicker.js"></script>
+    <script>
+        $.datetimepicker.setLocale('mn');
+        $('#datetimepicker').datetimepicker({
+            timepicker:false,
+            format:'Y/m/d',
+            formatDate:'Y/m/d',
+            mask:true, //mask:'9999/19/39 29:59',
+            value: new Date(),
+            minDate: false, //'-1970/01/02', // yesterday is minimum date
+            maxDate: false //'+1970/01/02' // and tommorow is maximum date calendar
+            
+           
+});
+    </script>
+</body>
+</html>
